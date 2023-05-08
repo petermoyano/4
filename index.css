@@ -713,6 +713,22 @@ p {
     }
     .navbar .menu {
         display: none;
+        flex-direction: column;
+    }
+    .navbar .menu.active {
+        display: flex;
+        padding: 0;
+    }
+    .navbar .menu.active li a {
+    }
+    .navbar #swipe-logo.active {
+        align-self: flex-start;
+    }
+    .navbar .hamburguer-button.active {
+        align-self: flex-start;
+    }
+    .navbar .menu li {
+        margin: var(--spacing-sm);
     }
     .navbar .navbar-button {
         display: none;
