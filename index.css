@@ -45,10 +45,15 @@
         #83e2ff 96.96%
     );
 }
+html,
+body {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
 body {
     font-family: var(--body-font);
     color: var(--text-dark);
-    width: 100%;
     margin: 0;
     box-sizing: border-box;
     padding: var(--spacing-sm) 0 0 0;
@@ -270,12 +275,12 @@ p {
     left: -50%;
     z-index: -1;
     --gradient-color-1: #3d8dbc;
-    --gradient-color-2: #0c0cbe;
+    --gradient-color-2: #3333a1;
     --gradient-color-3: #7038ff;
     --gradient-color-4: #ffba27;
 }
 
-/* HERO STYLES  */
+/* HERO */
 .button-container {
     display: flex;
     margin: var(--spacing-md) 0;
@@ -301,7 +306,7 @@ p {
     transform: translate(32px, -32px);
 }
 
-/* PARTNERS SECTION */
+/* PARTNERS*/
 .partners-section {
     width: 100%;
     display: flex;
@@ -321,7 +326,7 @@ p {
     place-self: center;
 }
 
-/* UNIFIED PLATFORM SECTION */
+/* UNIFIED PLATFORM */
 .unified-platform-section {
     padding: var(--spacing-xl) 0;
     width: 100%;
@@ -342,7 +347,7 @@ p {
     background-color: var(--primary-accent);
 }
 
-/* GRAPHIC GRID SECTION*/
+/* GRAPHIC GRID*/
 .graphic-section {
     width: 100%;
     display: flex;
@@ -383,7 +388,7 @@ p {
     box-shadow: var(--standard-box-shadow);
 }
 
-/* INTEGRATIONS STYLES */
+/* INTEGRATIONS */
 .integrations-section {
     color: var(--text-light);
     padding: var(--spacing-xl) 0;
@@ -433,7 +438,7 @@ p {
     border-radius: 20px;
 }
 
-/* WHY SWIPE SECTION */
+/* WHY SWIPE */
 .why-swipe-section {
     width: 100%;
     display: flex;
@@ -454,7 +459,7 @@ p {
     color: var(--text-dark);
 }
 
-/* GLOBAL SECTION */
+/* GLOBAL */
 .global-section {
     width: 100%;
     display: flex;
@@ -503,7 +508,7 @@ p {
     top: 10%;
 }
 
-/* VIRTUAL EVENTS SECTION */
+/* VIRTUAL EVENTS */
 .virtual-events-section {
     display: flex;
     justify-content: center;
@@ -556,8 +561,6 @@ p {
     bottom: -70px;
     left: var(--spacing-xl);
     z-index: 3;
-    /* width: 140px;
-    height: 80px; */
 }
 .virtual-events-section .avatars img {
     width: 80px;
@@ -581,7 +584,7 @@ p {
     font-weight: 700;
 }
 
-/* GETTING STARTED SECTION  */
+/* GETTING STARTED */
 .getting-started-section {
     display: flex;
     justify-content: center;
@@ -612,7 +615,7 @@ p {
     padding-left: 0;
 }
 
-/* FOOTER STYLES */
+/* FOOTER */
 .footer {
     display: flex;
     justify-content: center;
@@ -662,6 +665,7 @@ p {
         padding: 0 var(--spacing-md);
     }
 }
+
 @media only screen and (max-width: 1000px) {
     :root {
         --h1-size: 85px;
@@ -694,6 +698,7 @@ p {
         width: 40%;
     }
 }
+
 /* TABLET SIZE */
 @media only screen and (max-width: 768px) {
     :root {
@@ -701,10 +706,6 @@ p {
         --h1-height: 65px;
         --h3-size: 34px;
     }
-    .partners-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    /* HERO */
 
     /* NAVBAR */
     .navbar {
@@ -853,6 +854,8 @@ p {
     /* PARTNERS GRID */
     .partners-grid {
         grid-template-columns: repeat(2, 1fr);
+        padding: var(--spacing-md);
+        margin: var(--spacing-lg) 0;
     }
 
     /* GRAPHIC GRID*/
@@ -959,11 +962,4 @@ p {
     .footer .icon-link img {
         width: 18px;
     }
-}
-
-html,
-body {
-    width: 100%;
-    position: relative;
-    overflow-x: hidden;
 }
