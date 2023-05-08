@@ -251,6 +251,7 @@ p {
     max-width: var(--standard-width);
     padding: 0 var(--spacing-md);
     margin: 0 0 var(--spacing-xl) 0;
+    box-sizing: border-box;
 }
 .menu {
     display: flex;
@@ -407,7 +408,7 @@ p {
     box-shadow: var(--standard-box-shadow);
 }
 
-/* INTEGRATION STYLES */
+/* INTEGRATIONS STYLES */
 .integrations-section {
     color: var(--text-light);
     padding: var(--spacing-xl) 0;
@@ -711,11 +712,29 @@ p {
         padding: 0 var(--spacing-md);
     }
 }
+@media only screen and (max-width: 1000px) {
+    :root {
+        --h1-size: 85px;
+    }
+    main {
+        margin: var(--spacing-sm) 0 0 0;
+    }
+    /* HERO */
+    .hero .col-left {
+        width: 60%;
+    }
+    .hero .col-right {
+        width: 40%;
+    }
+}
+
 @media only screen and (max-width: 850px) {
+    /* PARTNERS */
     .partners-grid img {
         width: 100%;
         height: auto;
     }
+    /* INTEGRATIONS */
     .integrations-section .col-left {
         width: 60%;
     }
@@ -726,16 +745,59 @@ p {
 /* TABLET SIZE */
 @media only screen and (max-width: 768px) {
     :root {
-        --h1-size: 64px;
-        --h1-height: 72px;
+        --h1-size: 68px;
+        --h1-height: 65px;
         --h3-size: 34px;
     }
     .partners-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    /* HERO */
+
+    /* NAVBAR */
+    .navbar {
+        margin: 0;
+    }
+    .navbar .menu {
+        display: none;
+    }
+    .navbar .navbar-button {
+        display: none;
+    }
+
+    /* HERO */
+    #gradient-canvas {
+        height: 800px;
+    }
+
+    /* MAIN */
+    main {
+        margin: 0;
+    }
+    .hero .col-left {
+        width: 60%;
+    }
+    .hero .col-right {
+        width: 40%;
+    }
+
+    .hero-phone {
+        height: 400px;
+        transform: translate(32px);
+    }
+
+    .hero .two-column {
+        align-items: center;
+    }
+
     /* UNIFIED PLATFORM SECTION */
     .unified-platform-section h2 {
         width: 100%;
+    }
+
+    /* GRAPHIC GRID*/
+    #phone {
+        border-radius: 15px;
     }
     /* INTEGRATIONS SECTION */
     .integrations-section .card-container {
@@ -766,10 +828,28 @@ p {
     .virtual-events-section .section-container .col-left {
         padding: 0 0 var(--spacing-md) 0;
     }
+
+    /* GETTING STARTED SECTION */
+    .getting-started-section .col-right .card {
+        width: 100%;
+        margin: var(--spacing-md) 0;
+    }
+
+    .getting-started-section .col-right {
+        flex-wrap: wrap;
+    }
+    .getting-started-section .col-left {
+        align-self: center;
+    }
 }
 
 /* MOBILE SIZE */
 @media only screen and (max-width: 550px) {
+    :root {
+        --h1-size: 55px;
+        --h1-height: 55px;
+        --h3-size: 34px;
+    }
     .two-column {
         flex-direction: column;
     }
@@ -780,9 +860,35 @@ p {
         width: 100%;
         padding: 0;
     }
+    /* NAVBAR */
+    .navbar {
+        margin: var(--spacing-md);
+    }
+
+    /* HERO */
+    #gradient-canvas {
+        height: 800px;
+    }
+
+    .hero .two-column .hero-phone-container {
+        display: none;
+    }
+
+    /* MAIN */
+    main {
+        margin: var(--spacing-lg) 0 0 0;
+    }
     /* PARTNERS GRID */
     .partners-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* GRAPHIC GRID*/
+    #phone {
+        border-radius: 15px;
+    }
+    #credit-card {
+        border-radius: 15px;
     }
     /* INTEGRATIONS SECTION */
     .integrations-section .col-right {
@@ -822,7 +928,38 @@ p {
     .virtual-events-section .swipe-sessions-card .card.top {
         height: 40%;
     }
+
+    /* GETTING STARTED SECTION */
+    .getting-started-section .col-right .card {
+        width: 100%;
+        margin: var(--spacing-md) 0;
+    }
+
+    .getting-started-section .col-right {
+        flex-wrap: wrap;
+    }
+    /* FOOTER */
+    .footer .section-container {
+        flex-wrap: wrap;
+    }
+    .footer .col {
+        width: 50%;
+        margin: var(--spacing-md) 0;
+    }
+
+    .footer .col a {
+        font-size: 14px;
+    }
+
+    #footer-logo {
+        width: 70px;
+    }
+
+    .footer .icon-link img {
+        width: 18px;
+    }
 }
+
 html,
 body {
     width: 100%;
