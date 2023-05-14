@@ -305,6 +305,11 @@ p {
     height: 628px;
     transform: translate(32px, -32px);
 }
+#world {
+    background: linear-gradient(45deg, #3661ec, rgb(7, 88, 7));
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
 /* PARTNERS*/
 .partners-section {
